@@ -1,0 +1,438 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #263449;
+    line-height: 1.6;
+}
+
+header {
+    background: #102a43;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #36c2cf;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #36c2cf;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 400px;
+    background: linear-gradient(120deg, #102a43, #176b87);
+    display: flex;
+    align-items: center;
+    padding: 65px 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.etiqueta {
+    color: #53d5dc;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.etiqueta) {
+    color: #e1edf5;
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+.boton {
+    display: inline-block;
+    border: none;
+    border-radius: 7px;
+    background: #18a8b5;
+    color: white;
+    padding: 13px 22px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton:hover {
+    background: #12838d;
+}
+
+.boton:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.boton-secundario {
+    background: #176b87;
+}
+
+.seccion {
+    max-width: 1200px;
+    margin: auto;
+    padding: 65px 25px;
+}
+
+.encabezado {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px;
+}
+
+.encabezado h2 {
+    color: #102a43;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.encabezado p {
+    color: #64748b;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e1e8f0;
+    box-shadow: 0 4px 12px rgba(16, 42, 67, 0.05);
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.icono {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.tarjeta h3,
+.guia h3 {
+    color: #176b87;
+    margin-bottom: 10px;
+}
+
+.tarjeta p,
+.guia p,
+.guia li {
+    color: #526579;
+    font-size: 14px;
+}
+
+.guias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.guia {
+    background: white;
+    border-radius: 10px;
+    padding: 28px;
+    border-left: 5px solid #18a8b5;
+    box-shadow: 0 4px 12px rgba(16, 42, 67, 0.05);
+}
+
+.sistema-seccion {
+    max-width: 950px;
+}
+
+.sistema-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #e5f5f8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.sistema-icono {
+    font-size: 42px;
+}
+
+.sistema-info h3 {
+    color: #102a43;
+}
+
+.texto-pequeno {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.sistema-tarjeta {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #18a8b5;
+    box-shadow: 0 4px 12px rgba(16, 42, 67, 0.08);
+    margin-bottom: 20px;
+}
+
+.sistema-tarjeta h3 {
+    color: #176b87;
+    margin-bottom: 15px;
+}
+
+.sistema-tarjeta ol {
+    padding-left: 25px;
+}
+
+.sistema-tarjeta li {
+    margin-bottom: 12px;
+    color: #526579;
+}
+
+.selector-sistema {
+    background: white;
+    padding: 20px;
+    border: 1px solid #e1e8f0;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.selector-sistema label,
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.selector-sistema select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: white;
+}
+
+.selector-sistema[hidden] {
+    display: none;
+}
+
+.nota {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.formulario-seccion {
+    max-width: 850px;
+}
+
+#formularioRecomendacion {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(16, 42, 67, 0.08);
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font: inherit;
+    color: #263449;
+    background: white;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: 2px solid #18a8b5;
+    border-color: #18a8b5;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+#mensajeFormulario {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#mensajeFormulario.exito {
+    color: #16803c;
+}
+
+#mensajeFormulario.error {
+    color: #c53030;
+}
+
+footer {
+    background: #102a43;
+    color: #dbe7f0;
+    text-align: center;
+    padding: 28px 15px;
+    font-size: 13px;
+}
+
+footer p {
+    margin-top: 5px;
+}
+
+footer .logo {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 950px) {
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        gap: 12px 18px;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 14px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    .menu.abierto {
+        display: flex;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .hero {
+        padding: 55px 25px;
+        min-height: 350px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .guias {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado h2 {
+        font-size: 25px;
+    }
+
+    .seccion {
+        padding: 45px 18px;
+    }
+
+    #formularioRecomendacion {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .sistema-info {
+        align-items: flex-start;
+    }
+}

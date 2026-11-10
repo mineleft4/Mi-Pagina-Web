@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Soporte Tek: recomendaciones para mejorar el rendimiento de tu computadora.">
+    <title>Soporte Tek | Optimización de PC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#inicio" class="logo">Soporte<span>Tek</span></a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Abrir menú" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="menu" id="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#problemas">Problemas</a></li>
+                <li><a href="#recomendaciones">Recomendaciones</a></li>
+                <li><a href="#mi-sistema">Mi sistema</a></li>
+                <li><a href="#sugerencias">Sugerencias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <p class="etiqueta">CUIDA EL RENDIMIENTO DE TU PC</p>
+                <h1>Mejora el rendimiento de tu computadora</h1>
+                <p>
+                    Aprende a reducir el consumo excesivo de CPU y memoria RAM
+                    con recomendaciones sencillas y prácticas.
+                </p>
+                <a href="#recomendaciones" class="boton">
+                    Ver recomendaciones
+                </a>
+            </div>
+        </section>
+
+        <section class="seccion" id="problemas">
+            <div class="encabezado">
+                <h2>Problemas frecuentes</h2>
+                <p>Conoce qué puede estar afectando el rendimiento de tu equipo.</p>
+            </div>
+
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <div class="icono">⚙️</div>
+                    <h3>Procesos innecesarios</h3>
+                    <p>
+                        Algunos procesos consumen recursos aunque no sean
+                        necesarios para las actividades que realizas.
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="icono">🚀</div>
+                    <h3>Inicio automático</h3>
+                    <p>
+                        Muchas aplicaciones al iniciar pueden aumentar el
+                        tiempo de arranque del equipo.
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="icono">💻</div>
+                    <h3>Consumo de CPU</h3>
+                    <p>
+                        Los programas exigentes pueden utilizar gran parte
+                        de la capacidad del procesador.
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="icono">🧠</div>
+                    <h3>Memoria RAM</h3>
+                    <p>
+                        Ejecutar demasiadas aplicaciones puede reducir la
+                        fluidez del sistema.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccion" id="recomendaciones">
+            <div class="encabezado">
+                <h2>Recomendaciones generales</h2>
+                <p>Consejos básicos que pueden ayudar a mejorar el rendimiento.</p>
+            </div>
+
+            <div class="guias">
+                <article class="guia">
+                    <h3>1. Revisar los procesos</h3>
+                    <p>
+                        Comprueba qué aplicaciones consumen más recursos
+                        y cierra las que no estés utilizando.
+                    </p>
+                </article>
+
+                <article class="guia">
+                    <h3>2. Controlar el inicio automático</h3>
+                    <p>
+                        Desactiva las aplicaciones de inicio que no necesitas,
+                        siempre que reconozcas su función.
+                    </p>
+                </article>
+
+                <article class="guia">
+                    <h3>3. Reducir el consumo de CPU</h3>
+                    <p>
+                        Evita ejecutar demasiados programas exigentes a la vez
+                        y comprueba si alguna aplicación consume recursos
+                        de manera anormal.
+                    </p>
+                </article>
+
+                <article class="guia">
+                    <h3>4. Administrar la memoria RAM</h3>
+                    <p>
+                        Cierra aplicaciones y pestañas que no utilices.
+                        Si la memoria se agota frecuentemente, revisa
+                        las necesidades de tus programas.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccion sistema-seccion" id="mi-sistema">
+            <div class="encabezado">
+                <h2>Recomendaciones para tu sistema</h2>
+                <p>
+                    Detectamos tu sistema operativo para mostrarte instrucciones
+                    más adecuadas.
+                </p>
+            </div>
+
+            <div class="sistema-info">
+                <span class="sistema-icono" id="sistemaIcono">💻</span>
+                <div>
+                    <p class="texto-pequeno">Sistema operativo</p>
+                    <h3 id="sistemaDetectado">Detectando sistema...</h3>
+                </div>
+            </div>
+
+            <div id="recomendacionesSistema" class="sistema-tarjeta"
+                 aria-live="polite">
+                <p>Preparando recomendaciones...</p>
+            </div>
+
+            <button type="button" id="cambiarSistema"
+                    class="boton boton-secundario">
+                Elegir otro sistema
+            </button>
+
+            <div id="selectorSistema" class="selector-sistema" hidden>
+                <label for="sistemaManual">Selecciona tu sistema operativo:</label>
+                <select id="sistemaManual">
+                    <option value="windows">Windows</option>
+                    <option value="mac">macOS</option>
+                    <option value="linux">Linux</option>
+                </select>
+                <button type="button" id="aplicarSistema" class="boton">
+                    Mostrar recomendaciones
+                </button>
+            </div>
+
+            <p class="nota">
+                La detección es aproximada. Puedes elegir otro sistema si
+                la identificación no es correcta. Esta página ofrece consejos,
+                pero no analiza directamente los procesos de tu computadora.
+            </p>
+        </section>
+
+        <section class="seccion formulario-seccion" id="sugerencias">
+            <div class="encabezado">
+                <h2>Comparte tu recomendación</h2>
+                <p>
+                    Ayuda a otros estudiantes compartiendo consejos para
+                    mejorar el rendimiento de sus computadoras.
+                </p>
+            </div>
+
+            <form id="formularioRecomendacion">
+                <div class="campo">
+                    <label for="nombre">Nombre (opcional)</label>
+                    <input type="text" id="nombre" name="nombre"
+                           maxlength="80" placeholder="Escribe tu nombre">
+                </div>
+
+                <div class="campo">
+                    <label for="categoria">Tema de la recomendación</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Selecciona un tema</option>
+                        <option value="Procesos innecesarios">Procesos innecesarios</option>
+                        <option value="Programas de inicio">Programas de inicio</option>
+                        <option value="Consumo de CPU">Consumo de CPU</option>
+                        <option value="Memoria RAM">Memoria RAM</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="sistemaUsuario">Sistema operativo</label>
+                    <select id="sistemaUsuario" name="sistemaUsuario" required>
+                        <option value="windows">Windows</option>
+                        <option value="mac">macOS</option>
+                        <option value="linux">Linux</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="recomendacion">Tu recomendación</label>
+                    <textarea id="recomendacion" name="recomendacion"
+                              rows="5" maxlength="1000"
+                              placeholder="Describe la solución que propones..."
+                              required></textarea>
+                </div>
+
+                <button type="submit" class="boton" id="botonEnviar">
+                    Enviar recomendación
+                </button>
+
+                <p id="mensajeFormulario" role="status"
+                   aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#inicio" class="logo">Soporte<span>Tek</span></a>
+        <p>Proyecto académico GIS</p>
+        <p>Recomendaciones para mejorar el rendimiento de tu computadora.</p>
+    </footer>
+
+</body>
+</html>
